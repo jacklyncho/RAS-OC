@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Rating Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Rate These Things</h2>
+
+<form id="ratingForm">
+    <label>Design:
+        <input type="number" name="design" min="1" max="5" required>
+    </label>
+
+    <label>Ease of Use:
+        <input type="number" name="ease" min="1" max="5" required>
+    </label>
+
+    <label>Features:
+        <input type="number" name="features" min="1" max="5" required>
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Results</h3>
+<pre id="resultsBox">No ratings submitted yet.</pre>
+
+<script src="script.js"></script>
+</body>
+</html>
