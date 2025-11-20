@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAS-OCC Classification</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Response Adapted Surgery-Oral Cavity Cancer</h1></h1>
+    </header>
+
+    <div class="container">
+
+        <!-- ORAL TONGUE -->
+        <section class="card">
+            <h2>Structures Resected</h2>
+
+            <div class="group">
+                <h3>Oral Tongue</h3>
+                <label><input type="radio" name="oralTongue" value="0"> Not required (0)</label>
+                <label><input type="radio" name="oralTongue" value="0"> Type 1: Mucosectomy (0)</label>
+                <label><input type="radio" name="oralTongue" value="1"> Type 2: Partial glossectomy (1)</label>
+                <label><input type="radio" name="oralTongue" value="2"> Type 3: Hemiglossectomy (2)</label>
+                <label><input type="radio" name="oralTongue" value="4"> Type 4: Near total glossectomy (4)</label>
+                <label><input type="radio" name="oralTongue" value="5"> Type 5: Total glossectomy (5)</label>
+            </div>
+
+            <div class="group">
+                <h3>Skin Resection</h3>
+                <label><input type="radio" name="skinResection" value="0"> Not required (0)</label>
+                <label><input type="radio" name="skinResection" value="2"> Required (2)</label>
+            </div>
+
+            <div class="group">
+                <h3>Mandibulectomy</h3>
+                <label><input type="radio" name="mandibulectomy" value="0"> Not required</label>
+                <label><input type="radio" name="mandibulectomy" value="2"> Marginal mandibulectomy (2)</label>
+                <label><input type="radio" name="mandibulectomy" value="4"> Segmental mandibulectomy (4)</label>
+            </div>
+
+            <div class="group">
+                <h3>Maxillectomy</h3>
+                <label><input type="radio" name="maxillectomy" value="0"> Not required</label>
+                <label><input type="radio" name="maxillectomy" value="2"> Required (2)</label>
+            </div>
+        </section>
+
+        <!-- NECK DISSECTION -->
+        <section class="card">
+            <h2>Lymph Node Basin Management</h2>
+
+            <div class="group">
+                <h3>Neck Dissection</h3>
+                <label><input type="radio" name="neckDissection" value="0"> Not required</label>
+                <label><input type="radio" name="neckDissection" value="1"> Unilateral (1)</label>
+                <label><input type="radio" name="neckDissection" value="2"> Bilateral (2)</label>
+            </div>
+        </section>
+
+        <!-- EXPOSURE -->
+        <section class="card">
+            <h2>Exposure</h2>
+
+            <div class="group">
+                <h3>Mandibulotomy</h3>
+                <label><input type="radio" name="mandibulotomy" value="0"> Not required</label>
+                <label><input type="radio" name="mandibulotomy" value="3"> Required (3)</label>
+            </div>
+
+            <div class="group">
+                <h3>Cheek Flap</h3>
+                <label><input type="radio" name="cheekFlap" value="0"> Not required</label>
+                <label><input type="radio" name="cheekFlap" value="2"> Required (2)</label>
+            </div>
+        </section>
+
+        <!-- RECONSTRUCTION -->
+        <section class="card">
+            <h2>Reconstruction</h2>
+
+            <div class="group">
+                <h3>*Free Flap</h3>
+                <label><input type="radio" name="freeFlap" value="0"> Not required</label>
+                <label><input type="radio" name="freeFlap" value="2"> Required (2)</label>
+                <label><input type="radio" name="freeFlap" value="3"> Soft tissue (3)</label>
+                <label><input type="radio" name="freeFlap" value="4"> Bone (4)</label>
+                *** Free flap is designated with individual points, if 2 free flaps add points
+            </div>
+
+            <div class="group toggle-group">
+                <h3>Flap Count</h3>
+                <label class="toggle">
+                    <input type="checkbox" id="multipleFlaps">
+                    <span class="slider"></span>
+                </label>
+                <div class="toggle-labels">
+                    <span>Single</span>
+                    <span>Multiple (adds points)</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="total card">
+            <h2>Proposed Surgery Score</h2>
+            <div id="totalScore">0</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
