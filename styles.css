@@ -1,176 +1,39 @@
-/* GENERAL */
 body {
-    font-family: "Inter", Arial, sans-serif;
-    background: #eef2f6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* SCALE WRAPPER TO FIT CONTENT ON ONE PAGE (Adjusted) */
-/* Transformation removed to fix single-page fit issue */
-.scale-wrapper {
-    width: 100%;
-}
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 30px 20px 15px;
-    background: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+  margin: 30px;
 }
 
 h1 {
-    font-size: 28px;
-    margin: 0;
-    font-weight: 700;
-    color: #1a3a5f;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-/* CONTAINER (Adjusted) */
-.container {
-    max-width: 820px;
-    margin: 10px auto; /* Reduced vertical margin from 20px to 10px */
-    padding: 10px;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* CARD SECTIONS (Adjusted) */
-.card {
-    background: #ffffff;
-    padding: 15px 20px; /* Reduced vertical padding from 18px to 15px */
-    border-radius: 12px;
-    margin-bottom: 10px; /* Reduced margin between cards from 20px to 10px */
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+th, td {
+  border: 1px solid #888;
+  padding: 8px;
+  text-align: center;
 }
 
-h2 {
-    margin-top: 0;
-    color: #24476b;
-    font-size: 20px;
-    border-bottom: 2px solid #e7edf4;
-    padding-bottom: 6px;
+th {
+  background: #f2f2f2;
 }
 
-.group {
-    margin-top: 10px; /* Reduced vertical margin from 15px to 10px */
+.section td {
+  background: #ddd;
+  font-weight: bold;
+  text-align: left;
 }
 
-h3 {
-    margin-bottom: 5px; /* Reduced bottom margin from 6px to 5px */
-    margin-top: 10px; /* Reduced top margin from 12px to 10px */
-    color: #35597a;
+tfoot th {
+  background: #e8e8e8;
+  font-weight: bold;
 }
 
-/* FORM CONTROLS (Adjusted) */
-.group label {
-    display: block;
-    padding: 2px 0; /* Reduced vertical padding from 4px to 2px */
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* Styling for the new Free Flap Instruction Text */
-.flap-note {
-    font-size: 0.75rem; /* Smaller text */
-    color: #6a7c93; /* Subtle gray-blue color */
-    margin-top: 5px;
-    padding-top: 5px;
-    border-top: 1px dashed #e7edf4; /* Subtle separation line */
-    line-height: 1.3;
-}
-
-/* TOGGLE SWITCH */
-.toggle-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.toggle {
-    position: relative;
-    width: 50px;
-    height: 26px;
-}
-
-.toggle input {
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #c5d2df;
-    border-radius: 28px;
-    transition: 0.3s;
-}
-
-.slider:before {
-    content: "";
-    position: absolute;
-    height: 22px;
-    width: 22px;
-    left: 2px;
-    bottom: 2px;
-    background: white;
-    border-radius: 50%;
-    /* Added subtle box-shadow and border for a less "clunky" look */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border: 1px solid #e0e0e0;
-    transition: 0.3s;
-}
-
-input:checked + .slider {
-    background-color: #2d7cf3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(24px);
-}
-
-.toggle-labels {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    color: #516b88;
-}
-
-/* TOTAL SCORE BOX */
-.total #totalScore {
-    font-size: 36px;
-    font-weight: 700;
-    color: #2d7cf3;
-    text-align: center;
-    padding-top: 10px;
-}
-
-/* DISCLAIMER FOOTER (Updated for Neatness) */
-#site-disclaimer {
-    background: #f1f1f1;
-    padding: 20px 30px; /* Increased padding for more breathing room */
-    font-size: 0.8rem; /* Slightly larger text for readability */
-    line-height: 1.5;
-    color: #444;
-    border-top: 2px solid #ddd; /* Thicker border line for better separation */
-    margin-top: 25px; /* Added margin for space above the disclaimer */
-    text-align: center; /* Center the block */
-}
-
-#site-disclaimer h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.1rem;
-    color: #1a3a5f; /* Use the header color for importance */
-    text-transform: uppercase;
-}
-
-#site-disclaimer div p {
-    margin: 5px 0;
-    text-align: left; /* Align paragraphs to the left within the centered block */
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.delta {
+  font-weight: bold;
 }
